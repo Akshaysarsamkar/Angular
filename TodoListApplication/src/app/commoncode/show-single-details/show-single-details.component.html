@@ -1,0 +1,11 @@
+<div class="modal-backdrop"></div>
+<div class="modal-container">
+  <h3>Details</h3>
+  <div class="modal-content">
+    <p><strong>ID:</strong> {{ singleData[0].id }}</p>
+    <p><strong>Date:</strong> {{ singleData[0].date | date : "dd-MM-yyyy" }}</p>
+    <p><strong>Title:</strong> {{ singleData[0].title }}</p>
+    <p><strong>Description:</strong> {{ singleData[0].desciption }}</p>
+  </div>
+  <button class="btn btn-secondary" (click)="onClose()">Close</button>
+</div>

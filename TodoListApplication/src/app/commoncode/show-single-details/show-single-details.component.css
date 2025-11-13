@@ -1,0 +1,79 @@
+/* Background overlay */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.7); /* darker, less transparent */
+  backdrop-filter: blur(3px); /* adds a smooth blur effect */
+  z-index: 10;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Popup container */
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 420px;
+  z-index: 20;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.4s ease-out;
+}
+
+/* Title */
+.modal-container h3 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* Content text */
+.modal-content p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+/* Close button */
+.btn-secondary {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -60%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

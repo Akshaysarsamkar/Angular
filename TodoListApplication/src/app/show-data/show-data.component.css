@@ -1,0 +1,93 @@
+.container {
+  margin: 30px auto;
+  max-width: 90%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-table thead tr {
+  background: linear-gradient(90deg, #007bff, #00b4d8);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.custom-table tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #eef6ff;
+  cursor: pointer;
+}
+.btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  margin-right: 3px;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  margin-right: 3px;
+}
+
+.btn-delete:hover {
+  background-color: #b02a37;
+  transform: scale(1.05);
+}
+
+.btn-show {
+  background-color: #00b4d8;
+}
+
+.btn-show:hover {
+  background-color: #62b2c2;
+  transform: scale(1.05);
+}
+
+.custom-table:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
