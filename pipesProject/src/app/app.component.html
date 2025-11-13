@@ -1,0 +1,20 @@
+<h1>This is an <span>{{data | uppercase}}</span> Pipes</h1>
+
+<p>DOB : {{createdDate}}</p>
+
+<p>DOB  : {{createdDate | date}}</p>
+
+<p>DOB  : {{createdDate | date:'fullDate'}}</p>
+
+<p>Slice : {{sliceData |slice:0:7}}</p>
+
+<p>Currency : {{ 2500 | currency:'INR' }}</p>
+
+<p>Currency : {{ 2500 | currency:'USD' }}</p>
+
+<p>Currency : {{ 2500 | currency:'EUR'}}</p>
+
+<p>Chaning Pipes  : {{createdDate | date | uppercase}}</p>
+
+
+<p>{{title | trimString}}</p>
