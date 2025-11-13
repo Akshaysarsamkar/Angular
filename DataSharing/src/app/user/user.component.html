@@ -1,0 +1,13 @@
+ <div class="card">
+    <div class="card-title">
+      the added user is {{ element.firstname }}
+      <div class="card-body">
+        <p>
+          <strong *ngIf="element.type === 'superuser'" style="color: red">{{
+            element.lastname
+          }}</strong>
+          <em *ngIf="element.type === 'admin'">{{ element.lastname }}</em>
+        </p>
+      </div>
+    </div>
+  </div>

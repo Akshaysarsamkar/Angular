@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 [appBackground]="'lightgray'">this is custome Direcive</h1>
+      <app-user-form (superUserAdded)=onAddSuperUser($event) (adminAdded)=onAddAdmin($event)></app-user-form>
+            <h1 [appBackground]="'lightblue'">this is custome Direcive</h1>
+
+    </div>
+  </div>
+</div>
+
+<div class="row" style="margin: 2em">
+  <div class="col-12">
+    <app-user *ngFor="let element of users" [element]=element></app-user>
+  </div>
+</div>
