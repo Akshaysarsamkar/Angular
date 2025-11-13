@@ -1,0 +1,64 @@
+.row {
+  --bs-gutter-x: 1.5rem;  
+  --bs-gutter-y: 0;       
+  display: flex;          
+  flex-wrap: wrap;        
+  margin-top: calc(-1 * var(--bs-gutter-y));   
+  margin-right: calc(-0.5 * var(--bs-gutter-x)); 
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.col-xs-10 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+  width: 83.33333333%; 
+}
+
+.list-group{
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  border-radius:.25rem ;
+  
+}
+
+
+.list-group-item {
+  position: relative;
+  display: block;                  /* full width block element */
+  padding: 0.5rem 1rem;           /* vertical & horizontal padding */
+  margin-bottom: -1px;            /* border overlap for stacked items */
+  background-color: #fff;         /* white background */
+  border: 1px solid rgba(0, 0, 0, 0.125); /* light border */
+  color: #212529;                 /* text color */
+  text-decoration: none;          /* remove underline if link */
+  border-radius: 0;               /* optional, set to 0 or 0.25rem */
+  transition: background-color 0.15s ease-in-out;
+}
+
+/* First and last item rounded corners (optional) */
+.list-group-item:first-child {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.list-group-item:last-child {
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  margin: 0.5em;
+}
+
+/* Hover / focus / active states for clickable items */
+.list-group-item:hover,
+.list-group-item:focus {
+  background-color: #f8f9fa; /* light gray on hover */
+  cursor: pointer;
+}
+
+.list-group-item:active {
+  background-color: #e9ecef; /* darker gray on click */
+}

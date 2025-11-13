@@ -1,0 +1,19 @@
+<a
+  [routerLink]="[id]"
+  routerLinkActive="active-team"
+  class="list-group-item list-group-item-action"
+>
+  <div class="team-item">
+    <img
+      [src]="team.logo"
+      alt="logo"
+      class="team-logo"
+      height="100px"
+      width="100px"
+    />
+    <div class="team-info">
+      <h4>{{ team.name }}</h4>
+      <p>{{ team.description | slice:0:50 }}</p>
+    </div>
+  </div>
+</a>

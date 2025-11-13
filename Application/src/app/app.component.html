@@ -1,0 +1,14 @@
+<app-header (onSelection)=onSelection($event)> </app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- @if(showTeam){
+      <app-teams></app-teams>
+      } @else{
+      <app-players></app-players>
+      } -->
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

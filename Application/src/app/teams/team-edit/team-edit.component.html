@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col-12">
+    <form [formGroup]="teamForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-12 my-3 p-2">
+          <button class="btn btn-success mx-2" [disabled]="teamForm.invalid">save</button>
+          <button class="btn btn-danger"(click)="onCancle()">Cancle</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="formGroup">
+            <label for="name">name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              formControlName="name"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="formGroup">
+            <label for="logo">Team Logo</label>
+            <input
+              type="text"
+              id="logo"
+              class="form-control"
+              #logo
+              formControlName="logo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="formGroup">
+            <label for="description">Description</label>
+            <textarea
+              type="text"
+              id="description"
+              class="form-control"
+              formControlName="description"
+              rows="6"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="my-3">Players</h1>
+      <div formArrayName="players" class="skillContainer">
+        <div
+          *ngFor="let playerControl of players.controls; let index = index"
+          class="player-row"
+          [formGroupName]="index"
+        >
+          <div class="input-group">
+            <label>Player Name</label>
+            <input
+              type="text"
+              [formControlName]="'name'"
+              placeholder="Enter player name"
+              class="player-input"
+            />
+          </div>
+
+          <div class="input-group">
+            <label>Key Skill</label>
+            <input
+              type="text"
+              [formControlName]="'keySkill'"
+              placeholder="Enter key skill"
+              class="player-input"
+            />
+          </div>
+
+          <button class="btn btn-danger" (click)="onDeletePlayer(index)" type="button">Delete</button>
+        </div>
+
+        <div class="row">
+           <div class="col-12">
+             <button class="btn btn-primary" type="button" (click)="onAddingPlayer()">Add Player</button>
+           </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div style="display: flex; flex-wrap: wrap; justify-content: center">
+  <div class="card" *ngFor="let item of products">
+    <img [src]="item.cover" alt="Product" class="productImage" />
+    <div class="productDetails">
+      <h3 class="title">{{ item.title }}</h3>
+      <p class="price">{{ item.price }}</p>
+    </div>
+    <button class="button" (click)="addToCart(item.price)">Add to Cart</button>
+  </div>
+</div>

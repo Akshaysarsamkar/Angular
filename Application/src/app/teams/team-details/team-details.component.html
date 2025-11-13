@@ -1,0 +1,37 @@
+<div class="row my-2">
+  <div class="col-md-12">
+    <img height="200px" width="200px" [src]="teamSelected.logo" alt="logo" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{teamSelected.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="dropdown" appMyDropdown>
+      <button type="button" class="btn btn-success dropdown-toggle">Manage Team</button>
+      <ul class="dropdown-menu">
+        <li><a  class="dropdown-item" (click)="onEditTeam()">Edit Team</a></li>
+        <li><a  class="dropdown-item" (click)="onDelete()">Delete Team</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    {{teamSelected.description}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <button class="btn btn-primary my-2" (click)="addPlayers()">Add Players</button>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let player of teamSelected.players">
+         {{player?.name}} ({{player?.keySkill}})
+      </li>
+    </ul>
+  </div>
+</div>
+

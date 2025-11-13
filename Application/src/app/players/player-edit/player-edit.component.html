@@ -1,0 +1,42 @@
+<form (ngSubmit)="onAdd(playerForm)" #playerForm="ngForm">
+  <div class="row">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-md-5 form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-control"
+            ngModel
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5 form-group">
+          <label for="keyskill">KeySkill</label>
+          <input
+            type="text"
+            id="keyskill"
+            name="keySkill"
+            class="form-control"
+            ngModel
+            required
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <!-- @if(showalert){
+  <p class="alert alert-primary mt-2">Player Added...</p>
+  } -->
+    <div class="col-12">
+      <button class="btn btn-success m-1" type="submit" [disabled]="!playerForm.valid">{{editMode ? 'Update' : 'Add'}}</button>
+      <button class="btn btn-danger m-1" type="button" (click)="onDelete()" *ngIf="editMode">Delete</button>
+      <button class="btn btn-primary m-1" type="button" (click)="onReset()">Clear</button>
+    </div>
+  </div>
+</form>
