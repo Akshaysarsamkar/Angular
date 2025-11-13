@@ -1,0 +1,13 @@
+<!-- <div *ngIf="error" class="alert alert-danger">
+  <h4>An Error Occured</h4>
+  <p>{{ error?.message }}</p>
+  <button class="btn btn-danger" (click)="clearErrorMessage()">Okay</button>
+</div> -->
+
+<div class="backdrop"></div>
+<div class="error-box alert alert-danger">
+      <h4>An Error Occured</h4>
+
+  <p>{{ message }}</p>
+  <button class="btn btn-primary flaot-right" (click)="clearErrorMessage()">Close</button>
+</div>

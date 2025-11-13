@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 col-md-offset-3">
+      <form
+        #messageForm="ngForm"
+        (ngSubmit)="onCreateMessage(messageForm.value)"
+      >
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            ngModel
+            name="title"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="content">Content</label>
+          <textarea
+            class="form-control"
+            id="content"
+            required
+            ngModel
+            name="content"
+          ></textarea>
+        </div>
+
+        <button
+          class="btn btn-primary my-3"
+          type="submit"
+          [disabled]="!messageForm.valid"
+        >
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <hr />
+  <div class="row mb-4">
+    <div class="col-12 col-md-6 col-md-offset-3">
+      <button class="btn btn-primary" (click)="OnFetchMessage()" type="button">
+        Fetch Message
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger mx-3"
+        (click)="onClearMessage()"
+      >
+        Clear Messages
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <p *ngIf="isLoading">Feching Message Please wait...</p>
+
+    <div class="col-12 col-md-6 col-md-offset-3">
+      <p *ngIf="!loadedMessage.length && isLoading === false && !error">
+        No Messages Available!
+      </p>
+
+      <!-- <div *ngIf="error" class="alert alert-danger">
+        <h4>An Error Occured</h4>
+        <p>{{ error?.message }}</p>
+        <button class="btn btn-danger" (click)="clearErrorMessage()">Okay</button>
+      </div> -->
+
+      <!-- <app-error
+        [message]="error.message"
+        [clearErrorMessage]="clearErrorMessage"
+        *ngIf="error"
+      ></app-error> -->
+
+      <ng-template appComponentCreator #compCreator> </ng-template>
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let msg of loadedMessage">
+          <h3>{{ msg.title }}</h3>
+          <p>{{ msg.content }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<app-spinner [isLoading]="isLoading"></app-spinner>
