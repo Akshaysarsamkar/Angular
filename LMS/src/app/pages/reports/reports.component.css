@@ -1,0 +1,141 @@
+.reports-container {
+    padding: 25px 40px;
+    background: #181a1f;
+    min-height: 100vh;
+    font-family: Poppins, sans-serif;
+    color: #ffffff;
+}
+
+.reports-header {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #03dac6;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 25px;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    .card {
+        background: #24262b;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+        font-weight: 500;
+        transition: .3s ease;
+
+        span {
+            font-weight: 600;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(3, 218, 198, 0.5);
+        }
+    }
+}
+
+.charts-section {
+    background: #24262b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+
+    h4 {
+        margin-bottom: 15px;
+        color: #03dac6;
+    }
+}
+
+.category-table {
+    margin-top: 35px;
+    background: #24262b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+
+    h4 {
+        color: #03dac6;
+        margin-bottom: 15px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+
+        th,
+        td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            text-align: center;
+        }
+
+        th {
+            color: #03dac6;
+            font-weight: 600;
+            background: #1d1f25;
+        }
+
+        tbody tr:hover {
+            background-color: #1f2227;
+        }
+    }
+}
+
+.export-section {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+
+    button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .download-btn {
+        background: #03dac6;
+        color: #000;
+
+        &:hover {
+            background: #18ffff;
+            box-shadow: 0 0 15px rgba(3, 218, 198, 0.6);
+        }
+    }
+
+    .csv-btn {
+        background: #03a9f4;
+        color: #000;
+
+        &:hover {
+            background: #29b6f6;
+            box-shadow: 0 0 15px rgba(41, 182, 246, 0.6);
+        }
+    }
+}
+
+.charts-section {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.charts-section canvas {
+    width: 100% !important;
+    height: 100% !important;
+}

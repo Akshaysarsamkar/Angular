@@ -1,0 +1,63 @@
+<div class="expense-list-container">
+
+    <h2 class="title">📄 Expense History</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let item of expenseList(); let i = index">
+
+                    <td>{{ i + 1 }}</td>
+
+                    <td>
+                        <span *ngIf="editIndex !== i">{{ item.date | date }}</span>
+                        <input *ngIf="editIndex === i" type="date" [(ngModel)]="tempData.date" class="edit-input">
+                    </td>
+
+                    <td>
+                        <span *ngIf="editIndex !== i">₹{{ item.amount }}</span>
+                        <input *ngIf="editIndex === i" type="number" [(ngModel)]="tempData.amount" class="edit-input">
+                    </td>
+
+                    <td>
+                        <span *ngIf="editIndex !== i">{{ item.category }}</span>
+                        <select *ngIf="editIndex === i" [(ngModel)]="tempData.category" class="edit-input">
+                            <option>Food</option>
+                            <option>Travel</option>
+                            <option>Shopping</option>
+                            <option>Bills</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+
+                    <td class="action-btns">
+
+                        <button class="edit-btn" *ngIf="editIndex !== i" (click)="startEdit(i, item)">✏️ Edit</button>
+                        <button class="edit-btn" *ngIf="editIndex !== i" (click)="deleteEdit(item.id)">
+                            Delete</button>
+
+                        <button *ngIf="editIndex === i" class="save-btn" (click)="saveEdit(i)">✔ Save</button>
+
+                        <button *ngIf="editIndex === i" class="cancel-btn" (click)="cancelEdit()">✖ Cancel</button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<app-success-message *ngIf="showMessage"
+    [message]="isRemove ? 'Expense Removed successfully!' : 'Expense Edited successfully!'" [show]="showMessage"
+    (close)="close()"></app-success-message>

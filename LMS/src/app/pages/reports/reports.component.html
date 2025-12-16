@@ -1,0 +1,45 @@
+<div class="reports-container">
+
+    <div class="reports-header">📊 Reports Overview</div>
+
+    <div class="reports-grid">
+
+        <div class="summary-cards">
+            <div class="card">Total spent this month : <span>{{spendAmount}}</span></div>
+            <div class="card">Highest spending category : <span>{{maxSpendingcatogary.category}}</span></div>
+            <div class="card">Average daily spending : <span>{{avgDailySpending | number:'1.2-2'}}</span></div>
+            <div class="card">Number of expenses added : <span>{{expenceCount}}</span></div>
+        </div>
+
+        <div class="charts-section">
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+
+    <div class="category-table">
+        <h4>Category Breakdown</h4>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Total Spent</th>
+                    <th>% Contribution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of categoryWiseExpence;">
+                    <td>{{item.category}}</td>
+                    <td>{{item.amount}}</td>
+                    <td>{{(item.amount / 50000) * 100 | number:'1.0-2'}}%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="export-section">
+        <button class="download-btn">📄 Download PDF</button>
+        <button class="csv-btn" (click)="downloadFullTable()">📊 Export CSV</button>
+    </div>
+
+</div>

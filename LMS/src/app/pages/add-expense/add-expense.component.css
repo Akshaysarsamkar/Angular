@@ -1,0 +1,94 @@
+.expense-form-container {
+    width: 420px;
+    background: #24262b;
+    padding: 28px;
+    margin: 50px auto;
+    border-radius: 14px;
+    box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.45);
+    font-family: Poppins, sans-serif;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+}
+
+.expense-form-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.55);
+}
+
+.expense-form-container h2 {
+    text-align: center;
+    margin-bottom: 22px;
+    color: #03dac6;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-control label {
+    font-size: 14px;
+    color: #bdbdbd;
+    margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #2f3136;
+    color: #fff;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #03dac6;
+    background-color: #383b41;
+    box-shadow: 0px 0px 8px rgba(3, 218, 198, 0.5);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: #03dac6;
+    color: #000;
+    font-size: 17px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #18ffff;
+    box-shadow: 0 0 14px rgba(3, 218, 198, 0.9);
+    transform: scale(1.03);
+}
+
+.error-text {
+    color: #ff5370;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 2px solid #ff5370;
+    background: #3b2626;
+}

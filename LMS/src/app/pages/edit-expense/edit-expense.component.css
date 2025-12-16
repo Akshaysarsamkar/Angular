@@ -1,0 +1,105 @@
+.expense-list-container {
+    padding: 25px 40px;
+    background: #181a1f;
+    min-height: 100vh;
+    font-family: Poppins, sans-serif;
+    color: white;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #03dac6;
+}
+
+.table-wrapper {
+    background: #24262b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr {
+    background: #1d1f25;
+}
+
+th {
+    padding: 14px;
+    color: #03dac6;
+    text-transform: uppercase;
+}
+
+td {
+    text-align: center;
+    padding: 14px;
+    border-bottom: 1px solid #333;
+    color: #ddd;
+}
+
+tbody tr:hover {
+    background: #1f2227;
+    transition: 0.2s ease;
+    transform: scale(1.01);
+}
+
+.edit-input {
+    width: 100%;
+    padding: 8px;
+    background: #2c2f36;
+    border: 1px solid #03dac6;
+    border-radius: 6px;
+    color: white;
+}
+
+.edit-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(3, 218, 198, 0.6);
+}
+
+.action-btns {
+    display: flex;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #03a9f4;
+    color: black;
+}
+
+.edit-btn:hover {
+    background: #29b6f6;
+    transform: scale(1.05);
+}
+
+.save-btn {
+    background: #03dac6;
+    color: black;
+}
+
+
+.cancel-btn {
+    background: #ffa726;
+    color: black;
+}
+
+.cancel-btn:hover {
+    background: #ffb74d;
+    transform: scale(1.05);
+}
